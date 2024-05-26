@@ -1,5 +1,10 @@
+// Path: index.js
+
 const add = (numbers) => {
-  // logic for adding numbers
+  if (numbers === "") {
+    return 0;
+  }
+  return numbers.split(",").reduce((acc, num) => acc + parseInt(num), 0);
 };
+
 module.exports = { add };
-// Path: index.test.js
